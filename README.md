@@ -1,164 +1,109 @@
-# 🚀 Visionerds AI Engineering Internship - Week 4
+# 🚀 Visionerds AI Engineering Internship – Week 4
 
 ## 📌 Theme
 
-**Agents, Tool Use & Model Context Protocol (MCP)**
+**AI Agents, Tool Use & Model Context Protocol (MCP)**
 
-This week focuses on transforming a basic chatbot into an AI Agent capable of making decisions, using external tools, and routing requests intelligently.
-
----
-
-# 📅 Week Overview
-
-| Day | Topic | Status |
-|------|-------|--------|
-| Day 16 | Function Calling & Tool Use 
-| Day 17 | ReAct Agent Loop 
-| Day 18 | Model Context Protocol (MCP) 
-| Day 19 | Multi-Agent Router 
-| Day 20 | Integration Testing 
+This week focused on building intelligent AI agents capable of reasoning, using external tools, communicating through MCP, and routing requests to specialized agents.
 
 ---
 
-# 📂 Project Structure
+## 📅 Week Overview
 
-```
+| Day        | Topic                        |
+| ---------- | ---------------------------- |
+| **Day 1** | Function Calling & Tool Use  |
+| **Day 2** | ReAct Agent Loop             |
+| **Day 3** | Model Context Protocol (MCP) |
+| **Day 4** | Multi-Agent Router           |
+
+
+---
+
+## 📂 Project Structure
+
+```text
 Week4/
 │
-├── Day16/
-│   ├── .env
-│   ├── config.py
-│   ├── tools.py
-│   ├── schemas.py
-│   ├── llm.py
-│   ├── main.py
-│   └── README.md
-│
-├── Day17/
-├── Day18/
-├── Day19/
-├── Day20/
+├── DAY1/
+├── DAY2/
+├── DAY3/
+├── DAY4/
 │
 └── README.md
 ```
 
 ---
 
-# 🎯 Learning Objectives
+## 🎯 Learning Outcomes
 
-During this week I learned how modern AI agents work beyond simple prompting.
+Throughout this week, I learned how modern AI agents move beyond simple prompting by:
 
-Topics include:
-
-- Function Calling
-- Tool Use
-- ReAct (Reason → Act → Observe)
-- Model Context Protocol (MCP)
-- Multi-Agent Routing
-- Integration Testing
+* Using Function Calling
+* Executing external tools
+* Implementing the ReAct (Reason → Act → Observe) pattern
+* Working with the Model Context Protocol (MCP)
+* Building Multi-Agent systems with intelligent routing
+* Testing complete AI workflows
 
 ---
 
-# 🛠 Tech Stack
+## 🛠 Tech Stack
 
-- Python
-- Groq API
-- OpenAI Python SDK
-- JSON Schema
-- Function Calling
-- MCP
-- Git & GitHub
-
----
-
-# 📚 Day 16
-
-## Function Calling
-
-Implemented an AI Agent capable of deciding when to use external tools instead of answering directly.
-
-### Tools
-
-- Calculator
-- Word Counter
-
-### Features
-
-- Manual Tool Calling Loop
-- JSON Tool Schemas
-- Automatic Tool Selection
-- Modular Code Structure
-- Conversation Memory
-- Groq Integration
+* Python
+* Groq API
+* OpenAI Python SDK
+* FastMCP
+* Sentence Transformers
+* JSON Schema
+* Git & GitHub
 
 ---
 
-# 📚 Day 17
+## 📚 Daily Progress
 
-*(To be updated)*
+### 📅 Day 16 – Function Calling
 
-Topics:
+* Calculator & Word Counter tools
+* JSON Tool Schemas
+* Automatic Tool Selection
+* Conversation Memory
 
-- ReAct Loop
-- Multiple Tool Calls
-- Reason → Act → Observe
-- Agent Reasoning Trace
+### 📅 Day 17 – ReAct Agent
 
----
+* Reason → Act → Observe loop
+* Multiple Tool Calls
+* Agent Reasoning Workflow
 
-# 📚 Day 18
+### 📅 Day 18 – MCP
 
-*(To be updated)*
+* Built an MCP Server
+* Connected an MCP Client
+* Integrated the Official Filesystem MCP Server
+* Executed tools through MCP
 
-Topics:
+### 📅 Day 19 – Multi-Agent Router
 
-- Model Context Protocol (MCP)
-- Connecting External MCP Servers
-- MCP Tool Execution
+* Router Agent
+* Chat Agent
+* MCP Tool Agent
+* RAG Document Agent
+* Intelligent Query Routing
 
----
+### 📅 Day 20 – Integration Testing
 
-# 📚 Day 19
-
-*(To be updated)*
-
-Topics:
-
-- Multi-Agent Systems
-- Router Agent
-- Tool Agent
-- Document Agent
-
----
-
-# 📚 Day 20
-
-*(To be updated)*
-
-Topics:
-
-- Integration Testing
-- Routing Validation
-- Mixed Query Testing
-- Final Improvements
+* End-to-End Testing
+* Mixed Query Validation
+* Router Evaluation
+* Final System Integration
 
 ---
 
-# 🚀 How to Run
-
-Clone the repository
-
-```bash
-git clone <repository-url>
-```
-
-Install dependencies
+## 🚀 Run
 
 ```bash
 pip install -r requirements.txt
 ```
-
-Run
 
 ```bash
 python main.py
@@ -166,43 +111,37 @@ python main.py
 
 ---
 
-# 💡 Example Queries
+## 💬 Sample Queries
 
-Calculator
-
-```
-What is 47 multiplied by 89?
+```text
+Multiply 89 by 78
 ```
 
-Word Counter
-
-```
-Count the words in:
-
-Artificial Intelligence is amazing.
+```text
+Count words in Artificial Intelligence is amazing
 ```
 
-Normal Question
-
+```text
+What is Artificial Intelligence according to the document?
 ```
-Who founded Pakistan?
+
+```text
+Hello, how are you?
 ```
 
 ---
 
-# 📖 Concepts Covered
+## 📖 Concepts Covered
 
-- AI Agents
-- Tool Calling
-- Function Calling
-- JSON Schema
-- External Tool Execution
-- ReAct Pattern
-- MCP
-- Multi-Agent Systems
-
-
+* AI Agents
+* Function Calling
+* Tool Use
+* ReAct Pattern
+* Model Context Protocol (MCP)
+* Retrieval-Augmented Generation (RAG)
+* Multi-Agent Systems
+* Intelligent Routing
 
 ---
 
-⭐ Week 4 transforms a Retrieval-Augmented chatbot into an intelligent AI Agent capable of reasoning, selecting tools, and interacting with external systems.
+⭐ **Week 4 transformed a simple LLM chatbot into a modular AI agent ecosystem capable of reasoning, using tools, retrieving knowledge, and collaborating through specialized agents.**
