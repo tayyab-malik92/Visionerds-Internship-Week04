@@ -16,3 +16,22 @@ def decide(user_query):
         return {
             "reply": response
         }
+
+
+def explain(user_query, tool_name, tool_result):
+
+    prompt = f"""
+The user asked:
+
+{user_query}
+
+The MCP tool '{tool_name}' returned:
+
+{tool_result}
+
+Write a short, friendly answer for the user.
+Do not mention JSON.
+Do not mention MCP.
+"""
+
+    return ask_llm(prompt)

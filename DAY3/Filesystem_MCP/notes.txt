@@ -1,0 +1,4 @@
+Hello Visionerds!
+
+This is my first MCP Filesystem Server demo.
+I am learning the Model Context Protocol (MCP).

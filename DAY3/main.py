@@ -7,7 +7,7 @@ from dotenv import dotenv_values
 from fastmcp import Client
 from fastmcp.client.transports import StdioTransport
 
-from agent import decide
+from agent import decide, explain
 
 
 async def main():
@@ -27,32 +27,45 @@ async def main():
         print("=" * 60)
         print("🚀 Visionerds MCP Agent")
         print("=" * 60)
+        print("Type 'exit' to quit.")
 
         while True:
 
-            user = input("\nYou : ")
+            user = input("\nYou: ").strip()
 
             if user.lower() == "exit":
+                print("\nGoodbye!")
                 break
+
+            if not user:
+                continue
 
             decision = decide(user)
 
+            # No tool required
             if "reply" in decision:
-
-                print("\nAssistant :", decision["reply"])
+                print(f"\nAssistant: {decision['reply']}")
                 continue
 
             tool = decision["tool"]
             arguments = decision["arguments"]
 
-            print("\n🤔 LLM Decision :", tool)
+            print(f"\n🤔 LLM decided to use: {tool}")
 
-            result = await client.call_tool(
-                tool,
-                arguments
+            result = await client.call_tool(tool, arguments)
+
+            tool_output = result.data
+
+            print(f"🔧 Tool Output: {tool_output}")
+
+            # Let the LLM generate the final response
+            final_answer = explain(
+                user_query=user,
+                tool_name=tool,
+                tool_result=tool_output
             )
 
-            print("\n✅ Tool Result :", result.data)
+            print(f"\nAssistant: {final_answer}")
 
 
 if __name__ == "__main__":
